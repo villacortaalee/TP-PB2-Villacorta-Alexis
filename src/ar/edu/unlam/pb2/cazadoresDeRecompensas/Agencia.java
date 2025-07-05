@@ -28,7 +28,7 @@ public class Agencia {
     /* Punto 2) El prófugo capturado con mayor habilidad */
     public Profugo obtenerMasHabilCapturado() {
         Profugo masHabil = null;
-        int habilidadMaxima = -1;
+        Integer habilidadMaxima = -1;
 
         for (Cazador cazador : cazadores) {
             for (Profugo profugo : cazador.getCapturados()) {
@@ -45,10 +45,10 @@ public class Agencia {
     /* 3) El cazador con más capturas realizadas */
     public Cazador obtenerCazadorConMasCapturas() {
         Cazador mejorCazador = null;
-        int maxCapturas = -1;
+        Integer maxCapturas = -1;
 
         for (Cazador cazador : cazadores) {
-            int capturas = cazador.getCapturados().size();
+            Integer capturas = cazador.getCapturados().size();
             if (capturas > maxCapturas) {
                 maxCapturas = capturas;
                 mejorCazador = cazador;

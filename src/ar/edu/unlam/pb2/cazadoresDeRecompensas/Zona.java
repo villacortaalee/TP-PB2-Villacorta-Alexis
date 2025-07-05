@@ -42,7 +42,7 @@ public class Zona {
 	    this.profugos.removeAll(capturados);
 
 	    // Sumar experiencia
-	    int minimoHabilidadIntimidado;
+	    Integer minimoHabilidadIntimidado;
 
 	    if (habilidadesIntimidados.isEmpty()) {
 	        minimoHabilidadIntimidado = 0;
@@ -50,14 +50,14 @@ public class Zona {
 	        minimoHabilidadIntimidado = obtenerMinimo(habilidadesIntimidados);
 	    }
 
-	    int experienciaGanada = minimoHabilidadIntimidado + (2 * capturados.size());
+	    Integer experienciaGanada = minimoHabilidadIntimidado + (2 * capturados.size());
 	    
 	    cazador.sumarExperiencia(experienciaGanada);
 	}
 
 	private Integer obtenerMinimo(List<Integer> lista) {
 		int minimo = lista.get(0);
-	    for (int valor : lista) {
+	    for (Integer valor : lista) {
 	        if (valor < minimo) {
 	            minimo = valor;
 	        }

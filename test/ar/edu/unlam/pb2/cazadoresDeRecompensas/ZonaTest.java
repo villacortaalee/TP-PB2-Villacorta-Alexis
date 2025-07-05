@@ -89,7 +89,7 @@ public class ZonaTest {
 
         // experiencia += mínima habilidad de intimidados + 2 * capturados
         int esperado = 50 + 60 + (2 * 1); // 50 inicial + 60 (p2) + 2 (1 capturado)
-        assertEquals(esperado, cazador.getExperiencia());
+        assertEquals(Integer.valueOf(esperado), cazador.getExperiencia());
     }
 
     @Test
@@ -105,7 +105,8 @@ public class ZonaTest {
 
         // No se suma experiencia ni se capturan prófugos
         assertTrue(cazador.getCapturados().isEmpty());
-        assertEquals(100, cazador.getExperiencia());
+        
+        assertEquals(Integer.valueOf(100), cazador.getExperiencia());
     }
 }
 

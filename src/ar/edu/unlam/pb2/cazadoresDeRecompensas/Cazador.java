@@ -6,7 +6,7 @@ import java.util.Set;
 public abstract class Cazador {
 	
     protected String nombre;
-    protected int experiencia;
+    protected Integer experiencia;
     protected Set<Profugo> capturados = new HashSet<>();
 
     public Cazador(String nombre) {
@@ -26,7 +26,7 @@ public abstract class Cazador {
 	        return new HashSet<>(capturados);
 	    }
 
-	    public int getExperiencia() {
+	    public Integer getExperiencia() {
 	        return experiencia;
 	    }
 
@@ -38,7 +38,7 @@ public abstract class Cazador {
 	        return nombre;
 	    }
 
-	    public int cantidadCapturas() {
+	    public Integer cantidadCapturas() {
 	        return capturados.size();
 	    }
 

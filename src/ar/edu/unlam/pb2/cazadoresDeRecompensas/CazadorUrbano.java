@@ -7,13 +7,22 @@ public class CazadorUrbano extends Cazador {
     }
 
     @Override
-    public Boolean puedeCapturar(Profugo p) {
-        return this.experiencia > p.getInocencia() && !p.esNervioso();
+    public Boolean puedeCapturar(Profugo miProfugo) {
+    	
+    	Boolean estadoInicial = false;
+    	
+    	if(this.experiencia > miProfugo.getInocencia() && !miProfugo.esNervioso()) {
+    		estadoInicial = true;
+    	}else {
+    		estadoInicial = false;
+    	}
+    	
+        return estadoInicial;
     }
 
     @Override
-    public void intimidar(Profugo p) {
-        p.reducirInocencia(2);
-        p.setNervioso(false);
+    public void intimidar(Profugo miProfugo) {
+    	miProfugo.reducirInocencia(2);
+    	miProfugo.setNervioso(false);
     }
 }

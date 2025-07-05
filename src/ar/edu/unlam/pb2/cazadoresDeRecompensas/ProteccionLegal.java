@@ -31,12 +31,12 @@ public class ProteccionLegal implements IProfugo {
 
     @Override
     public void reducirInocencia(Integer cantidad) {
-        int inocenciaActual = profugoInicial.getInocencia();
+        Integer inocenciaActual = profugoInicial.getInocencia();
         
-        int cantidadReal;
+        Integer cantidadReal;
         
         // Queremos bajar solo hasta 40, no más
-        int inocenciaResultante = inocenciaActual - cantidad;
+        Integer inocenciaResultante = inocenciaActual - cantidad;
         
         if (inocenciaResultante < 40) {
             cantidadReal = inocenciaActual - 40;

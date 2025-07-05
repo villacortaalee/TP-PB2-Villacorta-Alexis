@@ -56,7 +56,8 @@ public class CazadorTest {
         zona.procesoCaptura(cazador);
 
         int experienciaEsperada = 100 + 70 + (2 * 1); // habilidad de p2 antes de intimidar
-        assertEquals(experienciaEsperada, cazador.getExperiencia());
+        
+        assertEquals(Integer.valueOf(experienciaEsperada), cazador.getExperiencia());
     }
 
     @Test

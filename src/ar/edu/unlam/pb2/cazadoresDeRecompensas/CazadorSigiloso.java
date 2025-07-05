@@ -7,14 +7,24 @@ public class CazadorSigiloso extends Cazador{
 	}
 	
 	 @Override
-    public Boolean puedeCapturar(Profugo p) {
-        return this.experiencia > p.getInocencia() && p.getHabilidad() < 50;
+    public Boolean puedeCapturar(Profugo miProfugo) {
+		 
+		 Boolean estadoInicial = false;
+		 
+		 if(this.experiencia > miProfugo.getInocencia() && miProfugo.getHabilidad() < 50) {
+			 estadoInicial = true;
+		 }else {
+			 estadoInicial = false;
+		 }
+		 
+		 return estadoInicial;
+
     }
 
     @Override
-    public void intimidar(Profugo p) {
-        p.reducirInocencia(2);
-        p.reducirHabilidad(5);
+    public void intimidar(Profugo miProfugo) {
+    	miProfugo.reducirInocencia(2);
+    	miProfugo.reducirHabilidad(5);
     }
 
 }

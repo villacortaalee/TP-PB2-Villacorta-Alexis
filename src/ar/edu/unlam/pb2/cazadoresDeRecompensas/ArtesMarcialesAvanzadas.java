@@ -15,8 +15,8 @@ public class ArtesMarcialesAvanzadas implements IProfugo{
 
     @Override
     public Integer getHabilidad() {
-        int habilidadOriginal = profugoInicial.getHabilidad();
-        int habilidadDoblada = habilidadOriginal * 2;
+        Integer habilidadOriginal = profugoInicial.getHabilidad();
+        Integer habilidadDoblada = habilidadOriginal * 2;
 
         if (habilidadDoblada > 100) {
             return 100;
